@@ -1,0 +1,149 @@
+* {
+  /*
+    -May want to add "border-box for "box-sizing so padding does not affect width
+    -Reset margin and padding
+   */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /*
+      -Background color is #344a72
+    */
+  font-family: "Raleway", sans-serif;
+  background: #344a72;
+  line-height: 1.8;
+}
+
+a {
+  text-decoration: none;
+}
+
+#container {
+  max-width: 400px;
+  height: 530px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.form-wrap {
+  /*
+      This is the white area around the form and heading, etc
+    */
+  background: white;
+  padding: 15px 25px;
+  color: #333;
+}
+
+.form-wrap h1,
+.form-wrap p {
+  /*
+      May want to center these
+    */
+  text-align: center;
+}
+
+.form-wrap .form-group {
+  /*
+      Each label, input is wrapped in .form-group
+    */
+  margin-top: 15px;
+}
+
+.form-wrap .form-group label {
+  /*
+      Label should be turned into a block element
+    */
+  display: block;
+  color: #666;
+}
+
+.form-wrap .form-group input {
+  /*
+      Inputs should reach accross the .form-wrap 100% and have some padding
+    */
+  width: 100%;
+  padding: 10px;
+  border: #ddd 1px solid;
+  border-radius: 5px;
+}
+
+.form-wrap button {
+  /*
+      Button should wrap accross 100% and display as block
+      Background color for button is #49c1a2
+    */
+  display: block;
+  width: 50%;
+  margin-top: 20px;
+  background: #49c1a2;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.form-wrap button:hover {
+  /*
+      Hover background color for button is #37a08e
+    */
+  background-color: #37a08e;
+}
+
+.form-wrap .btn-group button {
+  background-color: gray;
+  cursor: no-drop;
+}
+.flip-card {
+  height: 150px;
+  margin-left: 40px;
+  margin-right: 40px;
+  background-color: transparent;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.dim {
+  background-color: red;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+/* .flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+} */
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: solid #ca3;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.flip-card-front {
+  color: black;
+}
+
+.flip-card-back {
+  color: black;
+  padding-top: 50px;
+  transform: rotateY(180deg);
+}

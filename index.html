@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet"/>
+    <title>Form</title>
+  </head>
+  <body>
+    <div id="container">
+        <div class="form-wrap">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <strong id="title">TabaPay</strong>
+                        <br/>
+                        Number :
+                        <span id="show-card-number"></span>
+                        <br/>
+                        Expiration Date:
+                        <span id="show-ED"></span>
+                        <br/>
+                        Customer:
+                        <span id="show-name"></span>
+                        <br/>
+                        <span id="logo">TP</span>
+                     </div>
+                    <div class="flip-card-back">
+                       Security Code: <span id="show-SC"></span>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="flip-card" onclick="rotateCard()">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                    <h1>palaver</h1>
+                    </div>
+                    <div class="flip-card-back">
+                    <h1>babble</h1> 
+             
+                    </div>
+                </div>
+                </div> -->
+          <form>
+      
+            <div class="form-group">
+              <label for="card-number">Card Number</label> 
+              <input type="number" name="cardNumber" id="card-number" placeholder="13-19 digits" oninput="typeCardNumber()" onchange="clearFunction()" onkeyup="checkform()" onclick="flipCardBack()" required/>
+            </div>
+            <div class="form-group">
+              <label for="expiration-date">Expiration Date</label>
+              <input type="text" name="expirationDate" id="expiration-date" placeholder="MM/YY format" oninput="typeED()"onkeyup="checkform()" onclick="flipCardBack()" required/>
+            </div>
+            <div class="form-group">
+              <label for="security-code">Security Code</label>
+              <input type="number" name="securityCode" id="security-code" placeholder="Optional 3-4 digits" onkeyup="checkform()" onclick="flipCard()" oninput="typeSC()" required/>
+            </div>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" name="name" id="card-name" placeholder="Cardholder Name" onclick="flipCardBack()" oninput="typeName()" onkeyup="checkform()" required/>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn" id="clear" disabled onclick="resetFunction()" >Clear</button>
+                <button type="submit" class="btn" id="getData" disabled onclick="showFormData()">Get Card Data</button>
+            </div>
+            <button type="submit" class="btn" value="Cancel" >Cancel</button>
+          </form>
+        </div>
+        <script src="script.js"></script>
+  </body>
+</html>
