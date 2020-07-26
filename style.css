@@ -1,17 +1,10 @@
 * {
-  /*
-    -May want to add "border-box for "box-sizing so padding does not affect width
-    -Reset margin and padding
-   */
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
-  /*
-      -Background color is #344a72
-    */
   font-family: "Raleway", sans-serif;
   background: #344a72;
   line-height: 1.8;
@@ -29,9 +22,6 @@ a {
 }
 
 .form-wrap {
-  /*
-      This is the white area around the form and heading, etc
-    */
   background: white;
   padding: 15px 25px;
   color: #333;
@@ -39,31 +29,19 @@ a {
 
 .form-wrap h1,
 .form-wrap p {
-  /*
-      May want to center these
-    */
   text-align: center;
 }
 
 .form-wrap .form-group {
-  /*
-      Each label, input is wrapped in .form-group
-    */
   margin-top: 15px;
 }
 
 .form-wrap .form-group label {
-  /*
-      Label should be turned into a block element
-    */
   display: block;
   color: #666;
 }
 
 .form-wrap .form-group input {
-  /*
-      Inputs should reach accross the .form-wrap 100% and have some padding
-    */
   width: 100%;
   padding: 10px;
   border: #ddd 1px solid;
@@ -71,10 +49,6 @@ a {
 }
 
 .form-wrap button {
-  /*
-      Button should wrap accross 100% and display as block
-      Background color for button is #49c1a2
-    */
   display: block;
   width: 50%;
   margin-top: 20px;
@@ -87,9 +61,6 @@ a {
 }
 
 .form-wrap button:hover {
-  /*
-      Hover background color for button is #37a08e
-    */
   background-color: #37a08e;
 }
 
@@ -121,10 +92,6 @@ a {
   transition: transform 0.6s;
   transform-style: preserve-3d;
 }
-
-/* .flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-} */
 
 .flip-card-front,
 .flip-card-back {
